@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    transition: all 0.2s;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Overpass", sans-serif;
+    font-size: clamp(10px, 2dvw, 2dvh);
+    line-height: 1.78;
+    color: #616977;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    background-color: #f8fcff;
+}
+
+html { 
+    height: fit-content;
+    scroll-behavior: smooth;
+    background-repeat: no-repeat;
+
+    body {
+        position: relative;
+        width: clamp(250px, 100%, 100dvw);
+        height: 100%;
+        
+        h1 {font-size: 2.442rem; /* 39.04px */}
+        h2 {font-size: 1.954rem; /* 31.2px */}
+        h3 {font-size: 1.563rem; /* 24.96px */}
+        h4 {font-size: 1.250rem; /* 20px */}
+        h5 {font-size: 1.000rem; /* 16px */}
+        small {font-size: 0.640rem; /* 10.24px */}
+
+        h1, h2, h3, h4, h5 {
+            font-weight: 900;
+            color: #212227;
+            line-height: 1.3;
+        }
+        b {
+            font-weight: 700;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    padding: 1em;
+    min-width: 16em;
+    font-weight: 900;
+    font-size: smaller;
+    border: none;
+    border-radius: 0.25em;
+    padding: 2em;
+}
+
+input, select, option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 0.25em;
+    color: #212227;
+    background-color: white;
+    font-weight: 700;
+    appearance: none;
+    border: solid 1px rgb(218, 218, 218);
+    width: 100%;
+    height: 3em;
+    padding: 2em;
+    font-size: smaller;
+}
+
+grammarly-desktop-integration {
+    display: none;
+}
+
+::selection {
+    background-color: rgb(48, 85, 119);
+}
+
+::placeholder {
+    color: #616977;
+    opacity: 0.8;
+    font-weight: 700;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.show {
+    opacity: 1;
+    scale: 1;
+    transition: 0.6s;
+}
+
+.hidden {
+    opacity: 0;
+    scale: 0;
+}
