@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { browser } from "$app/environment";
+	import Analytics from "$lib/components/Analytics.svelte";
 	import Navigation from "$lib/components/Navigation.svelte";
     import "$lib/scss/app.scss"
     
@@ -21,5 +22,6 @@
     }
 </script>
 
+<Analytics></Analytics>
 <Navigation></Navigation>
 <slot></slot>
