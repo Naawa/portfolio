@@ -19,33 +19,37 @@
         </h4>
     {:else}
         <form method="POST" use:enhance class="hidden">
-            <span>
-                <input 
+            <input 
                 type="text" 
-                name="parentFirstName" placeholder="First Name" bind:value={$form.parentFirstName}  {...$constraints.parentFirstName}
-                aria-invalid={$errors.parentFirstName ? 'true' : undefined} class="hidden">
+                name="firstname" placeholder="First Name" bind:value={$form.firstname}  {...$constraints.firstname}
+                aria-invalid={$errors.firstname ? 'true' : undefined}>
 
-                <input 
+            <input 
                 type="text" 
-                name="parentLastName" 
+                name="lastname" 
                 placeholder="Last Name" 
-                bind:value={$form.parentLastName}  {...$constraints.parentLastName}
-                aria-invalid={$errors.parentLastName ? 'true' : undefined} class="hidden">
-            </span>
-            {#if $errors.parentFirstName}<span class="invalid">{$errors.name}</span>{/if}
-            {#if $errors.parentLastName}<span class="invalid">{$errors.name}</span>{/if}
+                bind:value={$form.lastname}  {...$constraints.lastname}
+                aria-invalid={$errors.lastname ? 'true' : undefined}>
+            {#if $errors.firstname}<span class="invalid">{$errors.name}</span>{/if}
+            {#if $errors.lastname}<span class="invalid">{$errors.name}</span>{/if}
             <input 
             type="text" 
             name="contactNumber" 
             placeholder="(000)-000-0000" bind:value={$form.contactNumber}  {...$constraints.contactNumber}
-            aria-invalid={$errors.contactNumber ? 'true' : undefined} maxlength="10" class="hidden">
+            aria-invalid={$errors.contactNumber ? 'true' : undefined} maxlength="10">
 
             <input 
             type="email" 
             name="email" 
             placeholder="email@example.com" bind:value={$form.email}  {...$constraints.email}
-            aria-invalid={$errors.email? 'true' : undefined} class="hidden">
-            <button class="hidden">Submit</button>
+            aria-invalid={$errors.email? 'true' : undefined}>
+
+            <input 
+            type="text" 
+            name="inquiry" 
+            placeholder="Your message..." bind:value={$form.inquiry}  {...$constraints.inquiry}
+            aria-invalid={$errors.inquiry? 'true' : undefined}>
+            <button>Submit</button>
         </form>
     {/if} 
     <p class="hidden">Or email me at <b>naous.dev@outlook.com.</b></p>
@@ -83,12 +87,11 @@
             flex-direction: column;
             gap: 1em;
             min-width: fit-content;
-            width: 35vw;
+            width: 65vw;
             max-width: 90dvw;
             background-color: #212227;
-            border: solid 0.25em rgb(218, 218, 218);
             border-radius: 0.5em;
-            z-index: 1;
+            box-shadow: 0 0.05em 1em #21212180;
 
             span {
                 width: 100%;

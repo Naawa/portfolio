@@ -6,16 +6,11 @@ import { z } from 'zod';
 
 
 const schema = z.object({
-    dojo: z.string().default('Select A Location'),
-    parentFirstName: z.string().min(3),
-    parentLastName: z.string().min(3),
+    firstname: z.string().min(3),
+    lastname: z.string().min(3),
     contactNumber: z.string().min(10),
-    childFirstName: z.string().min(3),
-    childLastName: z.string().min(2),
     email: z.string().email(),
-    utmSource: z.string(),
-    utmMedium: z.string(),
-    utmCampaign: z.string(),
+    inquiry: z.string().max(500)
     });
 
 export const load = async () => {
@@ -38,8 +33,11 @@ export const actions = {
     .from('leads')
     .insert([
     { 
+        firstname: `${form.data.firstname}`,
+        lastname: `${form.data.lastname}`,
         contactNumber: `${form.data.contactNumber}`,
         email: `${form.data.email}`, 
+        inquiry: `${form.data.inquiry}`
     },
     ])
     .select()
