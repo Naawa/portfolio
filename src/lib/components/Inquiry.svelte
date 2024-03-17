@@ -66,6 +66,7 @@
         width: 100%;
         height: fit-content;
         margin: 8em 0;
+        padding: 20dvw;
 
         p {
             letter-spacing: 0.1em;
@@ -86,12 +87,11 @@
             text-align: center;
             flex-direction: column;
             gap: 1em;
-            min-width: fit-content;
-            width: 65vw;
-            max-width: 90dvw;
+            width: 100%;
             background-color: #212227;
             border-radius: 0.5em;
             box-shadow: 0 0.05em 1em #21212180;
+            min-width: 300px;
 
             span {
                 width: 100%;
